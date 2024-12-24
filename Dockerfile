@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # Set environment variables for code-server
 ENV PASSWORD="Denisery"
-ENV TZ="UTC" # Set your preferred timezone
+ENV TZ="UTC"
 
 # Expose the default port for code-server
 EXPOSE 8080
