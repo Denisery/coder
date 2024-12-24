@@ -12,15 +12,15 @@ RUN apt-get update && apt-get install -y \
     git \
     && apt-get clean
 
+# Create a working directory for code-server
+WORKDIR /home/coder
+
 # Set environment variables for code-server
 ENV PASSWORD="Denisery"
 ENV TZ="UTC"
 
 # Expose the default port for code-server
 EXPOSE 8080
-
-# Optionally, copy custom configuration or extensions (if any)
-# COPY extensions /root/.local/share/code-server/extensions
 
 # Start code-server as root
 CMD ["code-server", "--bind-addr", "0.0.0.0:8080"]
